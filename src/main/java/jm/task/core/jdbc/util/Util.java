@@ -9,16 +9,6 @@ import org.hibernate.service.ServiceRegistry;
 
 import java.util.Properties;
 
-//public class Util {
-//    private static final String URL = "jdbc:mysql://localhost:3306";
-//    private static final String USERNAME = "root";
-//    private static final String PASSWORD = "v702275";
-//
-//    public static Connection getConnection()  throws SQLException  {
-//        return DriverManager.getConnection(URL,USERNAME,PASSWORD);
-//
-//    }
-
     public class Util {
     private static SessionFactory sessionFactory;
     public static SessionFactory getSessionFactory() {
