@@ -12,17 +12,8 @@ public class Util {
 
     private static Connection connection;
 
-    public static Connection connection() {
-        if (connection == null) {
-            try {
-                Driver driver = new com.mysql.cj.jdbc.Driver();
-                DriverManager.registerDriver(driver);
-                connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-            } catch (SQLException e) {
-                e.getStackTrace();
-                System.out.println("failed connection to database");
-            }
-        }
+    public static Connection getConnection()  throws SQLException  {
+        connection = DriverManager.getConnection(URL,USERNAME,PASSWORD);
         return connection;
     }
 
